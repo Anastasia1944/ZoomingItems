@@ -19,6 +19,22 @@ class ViewController: UIViewController {
     func test_storyboard(){
         myImageView2.transform = myImageView2.transform.translatedBy(x: 20, y: 20)
     }
+    
+    @IBAction func handlePan(_ gesture: UIPanGestureRecognizer) {
+      let translation = gesture.translation(in: view)
+
+      guard let gestureView = gesture.view else {
+        return
+      }
+
+      gestureView.center = CGPoint(
+        x: gestureView.center.x + translation.x,
+        y: gestureView.center.y + translation.y
+      )
+
+      gesture.setTranslation(.zero, in: view)
+    }
+
 
 }
 
