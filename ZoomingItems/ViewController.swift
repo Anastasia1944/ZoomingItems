@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var myImageView2: UIImageView!
+    //@IBOutlet weak var myImageView2: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
     
     func test_storyboard(){
-        myImageView2.transform = myImageView2.transform.translatedBy(x: 20, y: 20)
+        //myImageView2.transform = myImageView2.transform.translatedBy(x: 20, y: 20)
     }
     
     @IBAction func handlePan(_ gesture: UIPanGestureRecognizer) {

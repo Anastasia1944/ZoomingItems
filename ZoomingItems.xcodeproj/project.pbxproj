@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DAC7AD126836412002815AD /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC7AD026836412002815AD /* PicturesViewController.swift */; };
 		5DECB9C8267B656400F92C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECB9C7267B656400F92C86 /* AppDelegate.swift */; };
 		5DECB9CA267B656400F92C86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECB9C9267B656400F92C86 /* SceneDelegate.swift */; };
 		5DECB9CC267B656400F92C86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECB9CB267B656400F92C86 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5DAC7AD026836412002815AD /* PicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
 		5DECB9C4267B656400F92C86 /* ZoomingItems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomingItems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DECB9C7267B656400F92C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DECB9C9267B656400F92C86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				5DECB9D0267B656500F92C86 /* Assets.xcassets */,
 				5DECB9D2267B656500F92C86 /* LaunchScreen.storyboard */,
 				5DECB9D5267B656500F92C86 /* Info.plist */,
+				5DAC7AD026836412002815AD /* PicturesViewController.swift */,
 			);
 			path = ZoomingItems;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DECB9CC267B656400F92C86 /* ViewController.swift in Sources */,
+				5DAC7AD126836412002815AD /* PicturesViewController.swift in Sources */,
 				5DECB9C8267B656400F92C86 /* AppDelegate.swift in Sources */,
 				5DECB9CA267B656400F92C86 /* SceneDelegate.swift in Sources */,
 			);
