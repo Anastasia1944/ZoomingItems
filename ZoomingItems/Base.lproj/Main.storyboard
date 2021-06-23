@@ -38,8 +38,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1C-4c-vpX" userLabel="ButtonView">
                                         <rect key="frame" x="0.0" y="708" width="414" height="144"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyQ-JE-PTD">
-                                                <rect key="frame" x="24" y="12" width="366" height="120"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyQ-JE-PTD">
+                                                <rect key="frame" x="2" y="2" width="410" height="140"/>
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <state key="normal" title="Button">
@@ -49,16 +49,8 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="JyQ-JE-PTD" firstAttribute="leading" secondItem="A1C-4c-vpX" secondAttribute="leading" constant="20" id="0xe-LS-I8Q"/>
-                                            <constraint firstItem="JyQ-JE-PTD" firstAttribute="top" secondItem="A1C-4c-vpX" secondAttribute="top" constant="8" id="7fS-f1-1jt"/>
-                                            <constraint firstItem="JyQ-JE-PTD" firstAttribute="leading" secondItem="A1C-4c-vpX" secondAttribute="leading" constant="8" id="AD7-9p-rF6"/>
                                             <constraint firstAttribute="trailing" secondItem="JyQ-JE-PTD" secondAttribute="trailing" constant="2" id="Csg-fK-nBL"/>
-                                            <constraint firstItem="JyQ-JE-PTD" firstAttribute="top" secondItem="A1C-4c-vpX" secondAttribute="top" constant="20" id="DF4-o4-6Je"/>
-                                            <constraint firstAttribute="bottom" secondItem="JyQ-JE-PTD" secondAttribute="bottom" constant="20" id="FIC-le-Zm2"/>
-                                            <constraint firstAttribute="trailing" secondItem="JyQ-JE-PTD" secondAttribute="trailing" constant="20" id="HjX-Tn-uMx"/>
                                             <constraint firstAttribute="bottom" secondItem="JyQ-JE-PTD" secondAttribute="bottom" constant="2" id="QVe-KI-Ejd"/>
-                                            <constraint firstAttribute="trailing" secondItem="JyQ-JE-PTD" secondAttribute="trailing" constant="8" id="eVE-8v-iKb"/>
-                                            <constraint firstAttribute="bottom" secondItem="JyQ-JE-PTD" secondAttribute="bottom" constant="8" id="omr-j8-dYJ"/>
                                             <constraint firstItem="JyQ-JE-PTD" firstAttribute="top" secondItem="A1C-4c-vpX" secondAttribute="top" constant="2" id="tXc-49-8pH"/>
                                             <constraint firstItem="JyQ-JE-PTD" firstAttribute="leading" secondItem="A1C-4c-vpX" secondAttribute="leading" constant="2" id="woz-Jl-RKi"/>
                                         </constraints>
