@@ -17,10 +17,23 @@ class PicturesDataSource: NSObject {
             Picture(name: "corgi", pic_name: "corgi")]
   }
     
+    var selectedPicture: Picture? {
+      didSet {
+        if let selectedPicture = selectedPicture, let index = pictures.firstIndex(of: selectedPicture) {
+            selectedPictureIndex = index
+        }
+      }
+    }
+    
+    var selectedPictureIndex: Int?
 
   override init() {
     pictures = PicturesDataSource.generatePicturesData()
   }
+    
+    func selectPicture(at indexPath: IndexPath) {
+      selectedPicture = pictures[indexPath.row]
+    }
 
   func numberOfPictures() -> Int {
     pictures.count

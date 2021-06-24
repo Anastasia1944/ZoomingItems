@@ -10,19 +10,24 @@ import UIKit
 class ViewController: UITableViewController {
     
     var picturesDataSource = PicturesDataSource()
+    var picName = "alaska"
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction func picPressed(_ sender: UIButton) {
+
+        //self.performSegue(withIdentifier: "goToPics", sender: self)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        picName = picturesDataSource.picture(at: indexPath).pic_name
+        
         self.performSegue(withIdentifier: "goToPics", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToPics" {
             let destinationVC = segue.destination as! PicturesViewController
-            destinationVC.myImage = UIImage(named: "corgi")!
+            destinationVC.myImage = UIImage(named: picName)!
         }
     }
 }
