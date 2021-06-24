@@ -43,7 +43,6 @@ class PicturesViewController: UIViewController {
 
         UIView.animate(withDuration: Double(slideFactor * 2), delay: 0, options: .curveEaseOut, animations: {gestureView.center = finalPoint})
         
-        
     }
     
     @IBAction func handlePinch(_ gesture: UIPinchGestureRecognizer) {

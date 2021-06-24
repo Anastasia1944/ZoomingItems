@@ -14,7 +14,10 @@ class PicturesDataSource: NSObject {
   static func generatePicturesData() -> [Picture] {
     return [Picture(name: "baikal", pic_name: "baikal"),
             Picture(name: "alaska", pic_name: "10"),
-            Picture(name: "corgi", pic_name: "corgi")]
+            Picture(name: "corgi", pic_name: "corgi"),
+            Picture(name: "cat with glasses", pic_name: "cat-with-glasses"),
+            Picture(name: "baby elephant", pic_name: "baby-elephant")
+    ]
   }
     
     var selectedPicture: Picture? {

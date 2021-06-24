@@ -16,8 +16,6 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
     }
 
-
-        //self.performSegue(withIdentifier: "goToPics", sender: self)
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         picName = picturesDataSource.picture(at: indexPath).pic_name
         

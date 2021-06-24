@@ -48,6 +48,7 @@
 		5DAC7AD626838249002815AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5D9B73C926839D5900484CBE /* PicturesDataSource.swift */,
 				5D9B73CC26839DC700484CBE /* Picture.swift */,
 			);
 			path = Model;
@@ -98,7 +99,6 @@
 				5DECB9D0267B656500F92C86 /* Assets.xcassets */,
 				5DECB9D2267B656500F92C86 /* LaunchScreen.storyboard */,
 				5DECB9D5267B656500F92C86 /* Info.plist */,
-				5D9B73C926839D5900484CBE /* PicturesDataSource.swift */,
 			);
 			path = ZoomingItems;
 			sourceTree = "<group>";
