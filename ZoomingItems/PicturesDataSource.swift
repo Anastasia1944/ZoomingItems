@@ -16,6 +16,7 @@ class PicturesDataSource: NSObject {
             Picture(name: "alaska", pic_name: "10"),
             Picture(name: "corgi", pic_name: "corgi")]
   }
+    
 
   override init() {
     pictures = PicturesDataSource.generatePicturesData()

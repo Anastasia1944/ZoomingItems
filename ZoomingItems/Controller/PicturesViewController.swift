@@ -9,8 +9,13 @@ import UIKit
 
 class PicturesViewController: UIViewController {
 
+    @IBOutlet weak var myImageView: UIImageView!
+    var myImage = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myImageView.image = myImage
     }
     
     @IBAction func handlePan(_ gesture: UIPanGestureRecognizer) {

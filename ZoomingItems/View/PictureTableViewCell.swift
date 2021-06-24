@@ -10,7 +10,6 @@ import UIKit
 class PictureTableViewCell: UITableViewCell {
 
     @IBOutlet weak var picNameLabel: UILabel!
-    //@IBOutlet weak var ratingImageView: UIImageView!
     
     var picture: Picture? {
       didSet {
@@ -22,7 +21,6 @@ class PictureTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

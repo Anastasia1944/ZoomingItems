@@ -11,7 +11,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZoomingItems" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iwf-CB-v8i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -26,6 +25,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKu-ha-1cL">
+                                            <rect key="frame" x="20" y="6" width="351" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="picPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XXa-gM-v3S"/>
+                                            </connections>
+                                        </button>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nhq-sa-eDV">
                                             <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -45,6 +51,7 @@
                         <segue destination="Nch-Ee-Ksn" kind="presentation" identifier="goToPics" id="Dgv-Sb-2Gk"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="75"/>
         </scene>
@@ -78,6 +85,9 @@
                             <constraint firstItem="bAL-7I-AmE" firstAttribute="trailing" secondItem="FPO-dE-dV8" secondAttribute="trailing" id="pEd-wi-2ea"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myImageView" destination="FPO-dE-dV8" id="4qt-hZ-9UD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20b-8o-3Z2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="j1y-gz-GAD">
