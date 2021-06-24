@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZoomingItems" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iwf-CB-v8i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" red="0.14901961389999999" green="0.31372550129999999" blue="0.32941177490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PictureCell" textLabel="nhq-sa-eDV" style="IBUITableViewCellStyleDefault" id="5ss-Vy-FFA" customClass="PictureTableViewCell" customModule="ZoomingItems" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ss-Vy-FFA" id="zwz-Cb-qox">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nhq-sa-eDV">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="picNameLabel" destination="nhq-sa-eDV" id="Cq1-oC-6NK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <connections>
+                        <segue destination="Nch-Ee-Ksn" kind="presentation" identifier="goToPics" id="Dgv-Sb-2Gk"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75"/>
+        </scene>
+        <!--Pictures View Controller-->
+        <scene sceneID="7xH-il-6ck">
+            <objects>
+                <viewController id="Nch-Ee-Ksn" customClass="PicturesViewController" customModule="ZoomingItems" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fhM-sR-9ci">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="FPO-dE-dV8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="8000"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FPO-dE-dV8" secondAttribute="height" multiplier="207:409" id="Yj2-w3-T3a"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="j1y-gz-GAD" appends="YES" id="vdU-fG-wu6"/>
+                                    <outletCollection property="gestureRecognizers" destination="ofO-hs-I0j" appends="YES" id="XA9-wO-Wzv"/>
+                                    <outletCollection property="gestureRecognizers" destination="Q4P-bh-Ufr" appends="YES" id="Sqv-Qe-gDA"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bAL-7I-AmE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FPO-dE-dV8" firstAttribute="leading" secondItem="bAL-7I-AmE" secondAttribute="leading" id="8WP-Tq-u6e"/>
+                            <constraint firstItem="bAL-7I-AmE" firstAttribute="bottom" secondItem="FPO-dE-dV8" secondAttribute="bottom" id="TwA-TZ-4xJ"/>
+                            <constraint firstItem="FPO-dE-dV8" firstAttribute="top" secondItem="bAL-7I-AmE" secondAttribute="top" id="kVQ-dE-XCp"/>
+                            <constraint firstItem="bAL-7I-AmE" firstAttribute="trailing" secondItem="FPO-dE-dV8" secondAttribute="trailing" id="pEd-wi-2ea"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20b-8o-3Z2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="j1y-gz-GAD">
+                    <connections>
+                        <action selector="handlePan:" destination="Nch-Ee-Ksn" id="oh6-4h-6gD"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="ofO-hs-I0j">
+                    <connections>
+                        <action selector="handlePinch:" destination="Nch-Ee-Ksn" id="agm-YF-jm1"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="Q4P-bh-Ufr">
+                    <connections>
+                        <action selector="handleRotate:" destination="Nch-Ee-Ksn" id="jTr-qa-Atn"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="776.81159420289862" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="10" width="8000" height="8000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

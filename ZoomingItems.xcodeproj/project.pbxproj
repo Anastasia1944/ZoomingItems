@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D9B73CA26839D5900484CBE /* PicturesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73C926839D5900484CBE /* PicturesDataSource.swift */; };
+		5D9B73CD26839DC700484CBE /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73CC26839DC700484CBE /* Picture.swift */; };
+		5D9B73D02684910F00484CBE /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */; };
 		5DAC7AD126836412002815AD /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC7AD026836412002815AD /* PicturesViewController.swift */; };
 		5DECB9C8267B656400F92C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECB9C7267B656400F92C86 /* AppDelegate.swift */; };
 		5DECB9CA267B656400F92C86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECB9C9267B656400F92C86 /* SceneDelegate.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D9B73C926839D5900484CBE /* PicturesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesDataSource.swift; sourceTree = "<group>"; };
+		5D9B73CC26839DC700484CBE /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
 		5DAC7AD026836412002815AD /* PicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
 		5DECB9C4267B656400F92C86 /* ZoomingItems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomingItems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DECB9C7267B656400F92C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DAC7AD626838249002815AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B73CC26839DC700484CBE /* Picture.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DAC7AD726838250002815AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DECB9CD267B656400F92C86 /* Main.storyboard */,
+				5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DAC7AD826838256002815AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DAC7AD026836412002815AD /* PicturesViewController.swift */,
+				5DECB9CB267B656400F92C86 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5DECB9BB267B656400F92C86 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +90,15 @@
 		5DECB9C6267B656400F92C86 /* ZoomingItems */ = {
 			isa = PBXGroup;
 			children = (
+				5DAC7AD826838256002815AD /* Controller */,
+				5DAC7AD726838250002815AD /* View */,
+				5DAC7AD626838249002815AD /* Model */,
 				5DECB9C7267B656400F92C86 /* AppDelegate.swift */,
 				5DECB9C9267B656400F92C86 /* SceneDelegate.swift */,
-				5DECB9CB267B656400F92C86 /* ViewController.swift */,
-				5DECB9CD267B656400F92C86 /* Main.storyboard */,
 				5DECB9D0267B656500F92C86 /* Assets.xcassets */,
 				5DECB9D2267B656500F92C86 /* LaunchScreen.storyboard */,
 				5DECB9D5267B656500F92C86 /* Info.plist */,
-				5DAC7AD026836412002815AD /* PicturesViewController.swift */,
+				5D9B73C926839D5900484CBE /* PicturesDataSource.swift */,
 			);
 			path = ZoomingItems;
 			sourceTree = "<group>";
@@ -140,10 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D9B73CD26839DC700484CBE /* Picture.swift in Sources */,
 				5DECB9CC267B656400F92C86 /* ViewController.swift in Sources */,
 				5DAC7AD126836412002815AD /* PicturesViewController.swift in Sources */,
 				5DECB9C8267B656400F92C86 /* AppDelegate.swift in Sources */,
+				5D9B73D02684910F00484CBE /* PictureTableViewCell.swift in Sources */,
 				5DECB9CA267B656400F92C86 /* SceneDelegate.swift in Sources */,
+				5D9B73CA26839D5900484CBE /* PicturesDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
