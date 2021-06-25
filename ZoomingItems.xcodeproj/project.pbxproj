@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0F302F2685CB5700773BCF /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */; };
 		5D9B73CA26839D5900484CBE /* PicturesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73C926839D5900484CBE /* PicturesDataSource.swift */; };
 		5D9B73CD26839DC700484CBE /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73CC26839DC700484CBE /* Picture.swift */; };
 		5D9B73D02684910F00484CBE /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		5D9B73C926839D5900484CBE /* PicturesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesDataSource.swift; sourceTree = "<group>"; };
 		5D9B73CC26839DC700484CBE /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				5D9B73C926839D5900484CBE /* PicturesDataSource.swift */,
 				5D9B73CC26839DC700484CBE /* Picture.swift */,
+				5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				5D9B73CD26839DC700484CBE /* Picture.swift in Sources */,
 				5DECB9CC267B656400F92C86 /* ViewController.swift in Sources */,
 				5DAC7AD126836412002815AD /* PicturesViewController.swift in Sources */,
+				5D0F302F2685CB5700773BCF /* SegueIdentifiers.swift in Sources */,
 				5DECB9C8267B656400F92C86 /* AppDelegate.swift in Sources */,
 				5D9B73D02684910F00484CBE /* PictureTableViewCell.swift in Sources */,
 				5DECB9CA267B656400F92C86 /* SceneDelegate.swift in Sources */,

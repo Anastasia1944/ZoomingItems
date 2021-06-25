@@ -8,7 +8,7 @@
 import UIKit
 
 class PicturesViewController: UIViewController {
-
+    
     @IBOutlet weak var myImageView: UIImageView!
     var myImage = UIImage()
     
@@ -19,28 +19,28 @@ class PicturesViewController: UIViewController {
     }
     
     @IBAction func handlePan(_ gesture: UIPanGestureRecognizer) {
-      let translation = gesture.translation(in: view)
-
-      guard let gestureView = gesture.view else {
-        return
-      }
-
-      gestureView.center = CGPoint(x: gestureView.center.x + translation.x, y: gestureView.center.y + translation.y)
-      gesture.setTranslation(.zero, in: view)
+        let translation = gesture.translation(in: view)
+        
+        guard let gestureView = gesture.view else {
+            return
+        }
+        
+        gestureView.center = CGPoint(x: gestureView.center.x + translation.x, y: gestureView.center.y + translation.y)
+        gesture.setTranslation(.zero, in: view)
         
         guard gesture.state == .ended else { return }
-
+        
         let velocity = gesture.velocity(in: view)
         let magnitude = sqrt((velocity.x * velocity.x) + (velocity.y * velocity.y))
         let slideMultiplier = magnitude / 200
         
         let slideFactor = 0.01 * slideMultiplier
-
+        
         var finalPoint = CGPoint(x: gestureView.center.x + (velocity.x * slideFactor), y: gestureView.center.y + (velocity.y * slideFactor))
-
+        
         finalPoint.x = min(max(finalPoint.x, 0), view.bounds.width)
         finalPoint.y = min(max(finalPoint.y, 0), view.bounds.height)
-
+        
         UIView.animate(withDuration: Double(slideFactor * 2), delay: 0, options: .curveEaseOut, animations: {gestureView.center = finalPoint})
         
     }
@@ -49,12 +49,12 @@ class PicturesViewController: UIViewController {
         guard let gestureView = gesture.view else { return }
         gestureView.transform = gestureView.transform.scaledBy(x: gesture.scale, y: gesture.scale)
         gesture.scale = 1
-     }
-     
-     @IBAction func handleRotate(_ gesture: UIRotationGestureRecognizer) {
+    }
+    
+    @IBAction func handleRotate(_ gesture: UIRotationGestureRecognizer) {
         guard let gestureView = gesture.view else { return }
         gestureView.transform = gestureView.transform.rotated(by: gesture.rotation)
         gesture.rotation = 0
-     }
-
+    }
+    
 }

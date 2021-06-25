@@ -8,23 +8,23 @@
 import UIKit
 
 class PictureTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var picNameLabel: UILabel!
     
     var picture: Picture? {
-      didSet {
-        guard let picture = picture else { return }
-
-        picNameLabel.text = picture.name
-      }
+        didSet {
+            guard let picture = picture else { return }
+            
+            picNameLabel.text = picture.name
+        }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
 }

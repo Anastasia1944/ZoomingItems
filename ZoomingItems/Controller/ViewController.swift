@@ -15,15 +15,15 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         picName = picturesDataSource.picture(at: indexPath).pic_name
         
-        self.performSegue(withIdentifier: "goToPics", sender: self)
+        self.performSegue(withIdentifier: SegueIdentifiers.toImageViewer, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToPics" {
+        if segue.identifier == SegueIdentifiers.toImageViewer {
             let destinationVC = segue.destination as! PicturesViewController
             destinationVC.myImage = UIImage(named: picName)!
         }
@@ -31,14 +31,13 @@ class ViewController: UITableViewController {
 }
 
 extension ViewController {
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { picturesDataSource.numberOfPictures() }
-
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as! PictureTableViewCell
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { picturesDataSource.numberOfPictures() }
     
-    
-    cell.picture = picturesDataSource.picture(at: indexPath)
-    return cell
-  }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as! PictureTableViewCell
+        
+        cell.picture = picturesDataSource.picture(at: indexPath)
+        return cell
+    }
 }
 
