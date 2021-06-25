@@ -7,16 +7,22 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UIViewController {
     
     var picturesDataSource = PicturesDataSource()
     var picName = "alaska"
+    
+    override func loadView() {
+        super.loadView()
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         picName = picturesDataSource.picture(at: indexPath).pic_name
         
         self.performSegue(withIdentifier: SegueIdentifiers.toImageViewer, sender: self)
@@ -27,17 +33,6 @@ class ViewController: UITableViewController {
             let destinationVC = segue.destination as! PicturesViewController
             destinationVC.myImage = UIImage(named: picName)!
         }
-    }
-}
-
-extension ViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { picturesDataSource.numberOfPictures() }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PictureCell", for: indexPath) as! PictureTableViewCell
-        
-        cell.picture = picturesDataSource.picture(at: indexPath)
-        return cell
     }
 }
 

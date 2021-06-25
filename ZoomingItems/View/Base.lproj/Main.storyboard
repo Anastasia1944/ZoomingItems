@@ -41,7 +41,7 @@
                         </prototypes>
                     </tableView>
                     <connections>
-                        <segue destination="Nch-Ee-Ksn" kind="presentation" identifier="goToPics" id="Dgv-Sb-2Gk"/>
+                        <segue destination="Nch-Ee-Ksn" kind="presentation" identifier="goToPics" modalPresentationStyle="automatic" id="Dgv-Sb-2Gk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
