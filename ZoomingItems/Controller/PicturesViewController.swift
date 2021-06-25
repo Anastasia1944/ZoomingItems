@@ -10,7 +10,7 @@ import UIKit
 class PicturesViewController: UIViewController {
     
     @IBOutlet weak var myImageView: UIImageView!
-    var myImage = UIImage()
+    var myImage = UIImage(named: "10")
     
     override func viewDidLoad() {
         super.viewDidLoad()

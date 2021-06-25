@@ -7,15 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate{
     
     var picturesDataSource = PicturesDataSource()
     var picName = "alaska"
     
     override func loadView() {
         super.loadView()
-        
-        
+        guard let tableView = self.view as? UITableView else { return }
+        tableView.delegate = self
+        tableView.dataSource = picturesDataSource
     }
     
     override func viewDidLoad() {
