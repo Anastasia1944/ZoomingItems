@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5D0F302F2685CB5700773BCF /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */; };
+		5D35925C268B4FE600A27AF3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5D35925B268B4FE600A27AF3 /* Alamofire */; };
+		5D359263268B51FD00A27AF3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D359262268B51FD00A27AF3 /* ImagePicker.swift */; };
 		5D9B73CA26839D5900484CBE /* PicturesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73C926839D5900484CBE /* PicturesDataSource.swift */; };
 		5D9B73CD26839DC700484CBE /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73CC26839DC700484CBE /* Picture.swift */; };
 		5D9B73D02684910F00484CBE /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */; };
@@ -19,12 +21,11 @@
 		5DECB9CF267B656400F92C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DECB9CD267B656400F92C86 /* Main.storyboard */; };
 		5DECB9D1267B656500F92C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DECB9D0267B656500F92C86 /* Assets.xcassets */; };
 		5DECB9D4267B656500F92C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DECB9D2267B656500F92C86 /* LaunchScreen.storyboard */; };
-		D77872124C98B6E1299EF59A /* Pods_ZoomingItems.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BE2CB28E69E65F852C90E1 /* Pods_ZoomingItems.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0225D76D25255EEEAB633A47 /* Pods-ZoomingItems.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoomingItems.release.xcconfig"; path = "Target Support Files/Pods-ZoomingItems/Pods-ZoomingItems.release.xcconfig"; sourceTree = "<group>"; };
 		5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
+		5D359262268B51FD00A27AF3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5D9B73C926839D5900484CBE /* PicturesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesDataSource.swift; sourceTree = "<group>"; };
 		5D9B73CC26839DC700484CBE /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		5DECB9D3267B656500F92C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DECB9D5267B656500F92C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70BE2CB28E69E65F852C90E1 /* Pods_ZoomingItems.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoomingItems.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB886DD585F3A056D10E7383 /* Pods-ZoomingItems.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoomingItems.debug.xcconfig"; path = "Target Support Files/Pods-ZoomingItems/Pods-ZoomingItems.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D77872124C98B6E1299EF59A /* Pods_ZoomingItems.framework in Frameworks */,
+				5D35925C268B4FE600A27AF3 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,22 +62,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		415C987C7E87E89563A89D9A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CB886DD585F3A056D10E7383 /* Pods-ZoomingItems.debug.xcconfig */,
-				0225D76D25255EEEAB633A47 /* Pods-ZoomingItems.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		5DAC7AD626838249002815AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5D9B73C926839D5900484CBE /* PicturesDataSource.swift */,
 				5D9B73CC26839DC700484CBE /* Picture.swift */,
 				5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */,
+				5D359262268B51FD00A27AF3 /* ImagePicker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,7 +97,6 @@
 			children = (
 				5DECB9C6267B656400F92C86 /* ZoomingItems */,
 				5DECB9C5267B656400F92C86 /* Products */,
-				415C987C7E87E89563A89D9A /* Pods */,
 				017A50F5DB79C6E519A4B3FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -141,17 +131,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DECB9D8267B656500F92C86 /* Build configuration list for PBXNativeTarget "ZoomingItems" */;
 			buildPhases = (
-				3C5DF4533FF40F17CCE7ED09 /* [CP] Check Pods Manifest.lock */,
 				5DECB9C0267B656400F92C86 /* Sources */,
 				5DECB9C1267B656400F92C86 /* Frameworks */,
 				5DECB9C2267B656400F92C86 /* Resources */,
-				7BED03FB85C2C61AC4DF9603 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ZoomingItems;
+			packageProductDependencies = (
+				5D35925B268B4FE600A27AF3 /* Alamofire */,
+			);
 			productName = ZoomingItems;
 			productReference = 5DECB9C4267B656400F92C86 /* ZoomingItems.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 5DECB9BB267B656400F92C86;
+			packageReferences = (
+				5D35925A268B4FE600A27AF3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 5DECB9C5267B656400F92C86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,48 +195,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3C5DF4533FF40F17CCE7ED09 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZoomingItems-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7BED03FB85C2C61AC4DF9603 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZoomingItems/Pods-ZoomingItems-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZoomingItems/Pods-ZoomingItems-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZoomingItems/Pods-ZoomingItems-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		5DECB9C0267B656400F92C86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -255,6 +207,7 @@
 				5DECB9C8267B656400F92C86 /* AppDelegate.swift in Sources */,
 				5D9B73D02684910F00484CBE /* PictureTableViewCell.swift in Sources */,
 				5DECB9CA267B656400F92C86 /* SceneDelegate.swift in Sources */,
+				5D359263268B51FD00A27AF3 /* ImagePicker.swift in Sources */,
 				5DD554B52689DED700A2BE3E /* AddPicViewController.swift in Sources */,
 				5D9B73CA26839D5900484CBE /* PicturesDataSource.swift in Sources */,
 			);
@@ -400,7 +353,6 @@
 		};
 		5DECB9D9267B656500F92C86 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB886DD585F3A056D10E7383 /* Pods-ZoomingItems.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -420,7 +372,6 @@
 		};
 		5DECB9DA267B656500F92C86 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0225D76D25255EEEAB633A47 /* Pods-ZoomingItems.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +411,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D35925A268B4FE600A27AF3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D35925B268B4FE600A27AF3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D35925A268B4FE600A27AF3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DECB9BC267B656400F92C86 /* Project object */;
 }
