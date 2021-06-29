@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5D0F302F2685CB5700773BCF /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */; };
+		5D359253268B351900A27AF3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D359252268B351900A27AF3 /* Network.swift */; };
 		5D9B73CA26839D5900484CBE /* PicturesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73C926839D5900484CBE /* PicturesDataSource.swift */; };
 		5D9B73CD26839DC700484CBE /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73CC26839DC700484CBE /* Picture.swift */; };
 		5D9B73D02684910F00484CBE /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		0225D76D25255EEEAB633A47 /* Pods-ZoomingItems.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoomingItems.release.xcconfig"; path = "Target Support Files/Pods-ZoomingItems/Pods-ZoomingItems.release.xcconfig"; sourceTree = "<group>"; };
 		5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
+		5D359252268B351900A27AF3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5D9B73C926839D5900484CBE /* PicturesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesDataSource.swift; sourceTree = "<group>"; };
 		5D9B73CC26839DC700484CBE /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
@@ -68,7 +70,6 @@
 				CB886DD585F3A056D10E7383 /* Pods-ZoomingItems.debug.xcconfig */,
 				0225D76D25255EEEAB633A47 /* Pods-ZoomingItems.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,6 +79,7 @@
 				5D9B73C926839D5900484CBE /* PicturesDataSource.swift */,
 				5D9B73CC26839DC700484CBE /* Picture.swift */,
 				5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */,
+				5D359252268B351900A27AF3 /* Network.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D359253268B351900A27AF3 /* Network.swift in Sources */,
 				5D9B73CD26839DC700484CBE /* Picture.swift in Sources */,
 				5DECB9CC267B656400F92C86 /* ViewController.swift in Sources */,
 				5DAC7AD126836412002815AD /* PicturesViewController.swift in Sources */,

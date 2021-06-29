@@ -12,9 +12,13 @@ class AddPicViewController: UIViewController {
     @IBOutlet weak var picNameTextField: UITextField!
     @IBOutlet weak var picLinkTextField: UITextField!
     @IBOutlet weak var myImageView: UIImageView!
+    let network = Network()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        network.downloadImage()
+        self.myImageView.image = network.downloadedImage
+        print(network.getDownloadedImage())
     }
     
     @IBAction func addImageButtonPressed(_ sender: UIButton) {
