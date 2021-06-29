@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate{
     
     var picturesDataSource = PicturesDataSource()
-    var picName = "alaska"
+    var pic = UIImage()
     
     override func loadView() {
         super.loadView()
@@ -21,10 +21,12 @@ class ViewController: UIViewController, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //picturesDataSource.append(picture: Picture(name: "some name", picName: "", picPath: "https://www.fonstola.ru/pic/202010/1920x1080/fonstola.ru-410856.jpg"), to: self.view as! UITableView)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        picName = picturesDataSource.picture(at: indexPath).pic_name
+ 
+        pic = picturesDataSource.picture(at: indexPath).pic
         
         self.performSegue(withIdentifier: SegueIdentifiers.toImageViewer, sender: self)
     }
@@ -32,8 +34,21 @@ class ViewController: UIViewController, UITableViewDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SegueIdentifiers.toImageViewer {
             let destinationVC = segue.destination as! PicturesViewController
-            destinationVC.myImage = UIImage(named: picName)!
+            destinationVC.myImage = pic
         }
     }
+}
+
+extension ViewController {
+
+  @IBAction func savePictureDetail(_ segue: UIStoryboardSegue) {
+    guard
+      let addPicViewController = segue.source as? AddPicViewController,
+        let picture = addPicViewController.imagePicker.getDownloadedImage()
+      else {
+        return
+    }
+    picturesDataSource.append(picture: picture, to: self.view as! UITableView)
+  }
 }
 

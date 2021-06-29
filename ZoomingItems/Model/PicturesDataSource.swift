@@ -12,11 +12,11 @@ class PicturesDataSource: NSObject {
     private var pictures: [Picture]
     
     static func generatePicturesData() -> [Picture] {
-        return [Picture(name: "baikal", pic_name: "baikal"),
-                Picture(name: "alaska", pic_name: "10"),
-                Picture(name: "corgi", pic_name: "corgi"),
-                Picture(name: "cat with glasses", pic_name: "cat-with-glasses"),
-                Picture(name: "baby elephant", pic_name: "baby-elephant")
+        return [Picture(name: "baikal", pic: UIImage(named: "baikal")!),
+                Picture(name: "alaska", pic: UIImage(named: "10")!),
+                Picture(name: "corgi", pic: UIImage(named: "corgi")!),
+                Picture(name: "cat with glasses", pic: UIImage(named: "cat-with-glasses")!),
+                Picture(name: "baby elephant", pic: UIImage(named: "baby-elephant")!)
         ]
     }
     
@@ -53,7 +53,8 @@ class PicturesDataSource: NSObject {
 }
 
 extension PicturesDataSource: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { numberOfPictures()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        numberOfPictures()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -9,5 +9,5 @@ import UIKit
 
 struct Picture: Equatable {
     var name: String
-    var pic_name: String
+    var pic: UIImage
 }
