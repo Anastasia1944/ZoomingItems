@@ -10,37 +10,29 @@ import Alamofire
 
 class ImagePicker {
     
-    //let shared = ImagePicker()
-    var successDownload: ( (UIImage) -> Void )?
+    
+    var successDownload: ( (Picture) -> Void )?
     
     private var downloadedImage = Picture(name: "", pic: UIImage())
-    
-    let destination: DownloadRequest.Destination = { _, _ in
-        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let fileURL = documentsURL.appendingPathComponent("image.png")
-
-        return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
-    }
     
     init() { }
     
     func downloadImage(imageName:String, imageURL: String) {
         self.downloadedImage.name = imageName
-        AF.download(imageURL, to: destination)
+        AF.download(imageURL)
             .downloadProgress { progress in
-            print("Download Progress: \(progress.fractionCompleted)")
-        }
-        .responseData { response in
-            if response.error == nil, let imagePath = response.fileURL?.path {
-                self.downloadedImage.pic = UIImage(contentsOfFile: imagePath)!
-                //print(self.downloadedImage.pic)
-                self.successDownload?(self.downloadedImage.pic)
+                print("Download Progress: \(progress.fractionCompleted)")
             }
-        }
+            .responseData { response in
+                if response.error == nil, let imagePath = response.fileURL?.path {
+                    self.downloadedImage.pic = UIImage(contentsOfFile: imagePath)!
+                    self.successDownload?(self.downloadedImage)
+                }
+            }
     }
     
     func getDownloadedImage() -> Picture? {
         return downloadedImage
     }
-
+    
 }
