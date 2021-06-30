@@ -11,7 +11,7 @@ class AddPicViewController: UIViewController {
     
     @IBOutlet weak var picNameTextField: UITextField!
     @IBOutlet weak var picLinkTextField: UITextField!
-    @IBOutlet weak var myImageView: UIImageView!
+
     var imagePicker = ImagePicker()
     
     override func viewDidLoad() {
@@ -24,7 +24,15 @@ class AddPicViewController: UIViewController {
 
         imagePicker.downloadImage(imageName: imageName, imageURL: imageLink)
         
+        self.performSegue(withIdentifier: SegueIdentifiers.backToImageViewer, sender: self)
         //navigationController?.popViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueIdentifiers.backToImageViewer {
+            let destinationVC = segue.destination as! ViewController
+            destinationVC.imagePicker = imagePicker
+        }
     }
     
     /*

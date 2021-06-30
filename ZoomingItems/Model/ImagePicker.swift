@@ -9,6 +9,10 @@ import UIKit
 import Alamofire
 
 class ImagePicker {
+    
+    //let shared = ImagePicker()
+    var successDownload: ( (UIImage) -> Void )?
+    
     private var downloadedImage = Picture(name: "", pic: UIImage())
     
     let destination: DownloadRequest.Destination = { _, _ in
@@ -18,17 +22,19 @@ class ImagePicker {
         return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
     }
     
+    init() { }
+    
     func downloadImage(imageName:String, imageURL: String) {
         self.downloadedImage.name = imageName
         AF.download(imageURL, to: destination)
             .downloadProgress { progress in
             print("Download Progress: \(progress.fractionCompleted)")
         }
-        .response { response in
-            debugPrint(response)
-
+        .responseData { response in
             if response.error == nil, let imagePath = response.fileURL?.path {
                 self.downloadedImage.pic = UIImage(contentsOfFile: imagePath)!
+                //print(self.downloadedImage.pic)
+                self.successDownload?(self.downloadedImage.pic)
             }
         }
     }

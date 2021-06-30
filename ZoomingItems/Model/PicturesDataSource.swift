@@ -47,6 +47,7 @@ class PicturesDataSource: NSObject {
         tableView.insertRows(at: [IndexPath(row: pictures.count-1, section: 0)], with: .automatic)
     }
     
+    
     func picture(at indexPath: IndexPath) -> Picture {
         pictures[indexPath.row]
     }

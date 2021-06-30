@@ -16,6 +16,7 @@ class PictureTableViewCell: UITableViewCell {
             guard let picture = picture else { return }
             
             picNameLabel.text = picture.name
+            
         }
     }
     

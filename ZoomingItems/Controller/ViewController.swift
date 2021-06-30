@@ -11,6 +11,7 @@ class ViewController: UIViewController, UITableViewDelegate{
     
     var picturesDataSource = PicturesDataSource()
     var pic = UIImage()
+    var imagePicker = ImagePicker()
     
     override func loadView() {
         super.loadView()
@@ -21,7 +22,14 @@ class ViewController: UIViewController, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //picturesDataSource.append(picture: Picture(name: "some name", picName: "", picPath: "https://www.fonstola.ru/pic/202010/1920x1080/fonstola.ru-410856.jpg"), to: self.view as! UITableView)
+        imagePicker.successDownload = { pic in
+            print(pic)
+            self.picturesDataSource.append(picture: Picture(name: "test", pic: pic), to: self.view as! UITableView)
+        }
+    }
+    
+    @IBAction func addPicButton(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: SegueIdentifiers.toAddImage, sender: self)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
@@ -39,16 +47,4 @@ class ViewController: UIViewController, UITableViewDelegate{
     }
 }
 
-extension ViewController {
-
-  @IBAction func savePictureDetail(_ segue: UIStoryboardSegue) {
-    guard
-      let addPicViewController = segue.source as? AddPicViewController,
-        let picture = addPicViewController.imagePicker.getDownloadedImage()
-      else {
-        return
-    }
-    picturesDataSource.append(picture: picture, to: self.view as! UITableView)
-  }
-}
 

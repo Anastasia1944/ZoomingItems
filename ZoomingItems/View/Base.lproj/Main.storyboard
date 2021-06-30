@@ -29,7 +29,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZoomingItems" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iwf-CB-v8i">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="separatorColor" red="0.14901961389999999" green="0.31372550129999999" blue="0.32941177490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -59,12 +59,13 @@
                     <navigationItem key="navigationItem" id="yh4-wS-svK">
                         <barButtonItem key="rightBarButtonItem" title="Add pic" id="86l-Wi-pK2">
                             <connections>
-                                <segue destination="ut3-ix-hLl" kind="show" id="fBJ-Ux-e7r"/>
+                                <action selector="addPicButton:" destination="BYZ-38-t0r" id="OtM-eO-liH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="Nch-Ee-Ksn" kind="show" identifier="goToPics" id="Dgv-Sb-2Gk"/>
+                        <segue destination="ut3-ix-hLl" kind="show" identifier="goToAddPics" id="kfZ-cU-dUK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,11 +77,11 @@
             <objects>
                 <viewController id="Nch-Ee-Ksn" customClass="PicturesViewController" customModule="ZoomingItems" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fhM-sR-9ci">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="FPO-dE-dV8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="j1y-gz-GAD" appends="YES" id="vdU-fG-wu6"/>
@@ -127,7 +128,7 @@
             <objects>
                 <viewController id="ut3-ix-hLl" customClass="AddPicViewController" customModule="ZoomingItems" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w5m-nu-pjl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pic name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B1q-BA-uYI">
@@ -142,10 +143,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Zg-Ee-aYY">
-                                <rect key="frame" x="87" y="340" width="240" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZq-mf-89V">
                                 <rect key="frame" x="95" y="613" width="224" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -158,35 +155,25 @@
                                     <action selector="addImageButtonPressed:" destination="ut3-ix-hLl" eventType="touchUpInside" id="cFx-Ei-905"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by5-Y2-UXq">
-                                <rect key="frame" x="95" y="738" width="224" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemFillColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Add image to list">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8gZ-ru-UOn" kind="unwind" unwindAction="savePictureDetail:" id="SUn-Vf-YBK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DBZ-pt-eLy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="y0q-7K-XVf"/>
                     <connections>
-                        <outlet property="myImageView" destination="1Zg-Ee-aYY" id="ezV-nl-t4Y"/>
                         <outlet property="picLinkTextField" destination="0Sn-99-RtV" id="5Kp-3r-dDC"/>
                         <outlet property="picNameTextField" destination="B1q-BA-uYI" id="Ceq-t4-cHC"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToPics" id="MMw-gn-DYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdp-vk-jvg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="8gZ-ru-UOn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="776.81159420289862" y="802.90178571428567"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MMw-gn-DYs"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="10" width="8000" height="8000"/>
         <systemColor name="labelColor">
