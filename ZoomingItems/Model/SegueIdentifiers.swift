@@ -10,5 +10,4 @@ import Foundation
 struct SegueIdentifiers {
     static let toImageViewer = "goToPics"
     static let toAddImage = "goToAddPics"
-    static let backToImageViewer = "backToPics"
 }

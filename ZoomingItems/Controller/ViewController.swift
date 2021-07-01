@@ -22,11 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         imagePicker.successDownload = { pic in
-            self.picturesDataSource.append(picture: pic, to: self.view as! UITableView)
+            DispatchQueue.main.async {self.picturesDataSource.append(picture: pic, to: self.view as! UITableView)}
         }
     }
     
@@ -44,10 +41,9 @@ class ViewController: UIViewController, UITableViewDelegate{
         if segue.identifier == SegueIdentifiers.toImageViewer {
             let destinationVC = segue.destination as! PicturesViewController
             destinationVC.myImage = pic
-        } else if let addPicViewController = segue.destination as? AddPicViewController {
-            addPicViewController.callback = { message in
-                self.imagePicker = message
-            }
+        } else if segue.identifier == SegueIdentifiers.toAddImage {
+            let destinationVC = segue.destination as! AddPicViewController
+            destinationVC.imagePicker = imagePicker
         }
     }
 }
