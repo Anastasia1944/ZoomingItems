@@ -10,14 +10,11 @@ import UIKit
 class PicturesDataSource: NSObject {
     
     private var pictures: [Picture]
+    var picCoding = PicCoding()
     
     static func generatePicturesData() -> [Picture] {
-        return [Picture(name: "baikal", pic: UIImage(named: "baikal")!),
-                Picture(name: "alaska", pic: UIImage(named: "10")!),
-                Picture(name: "corgi", pic: UIImage(named: "corgi")!),
-                Picture(name: "cat with glasses", pic: UIImage(named: "cat-with-glasses")!),
-                Picture(name: "baby elephant", pic: UIImage(named: "baby-elephant")!)
-        ]
+        let picCode = PicCoding()
+        return picCode.pictures!
     }
     
     var selectedPicture: Picture? {
@@ -45,6 +42,8 @@ class PicturesDataSource: NSObject {
     func append(picture: Picture, to tableView: UITableView) {
         pictures.append(picture)
         tableView.insertRows(at: [IndexPath(row: pictures.count-1, section: 0)], with: .automatic)
+        picCoding.pictures!.append(picture)
+        picCoding.encode()
     }
     
     

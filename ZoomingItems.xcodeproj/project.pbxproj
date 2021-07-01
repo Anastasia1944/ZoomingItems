@@ -10,6 +10,7 @@
 		5D0F302F2685CB5700773BCF /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */; };
 		5D35925C268B4FE600A27AF3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5D35925B268B4FE600A27AF3 /* Alamofire */; };
 		5D359263268B51FD00A27AF3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D359262268B51FD00A27AF3 /* ImagePicker.swift */; };
+		5D359272268DF1A400A27AF3 /* PicCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D359271268DF1A400A27AF3 /* PicCoding.swift */; };
 		5D9B73CA26839D5900484CBE /* PicturesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73C926839D5900484CBE /* PicturesDataSource.swift */; };
 		5D9B73CD26839DC700484CBE /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73CC26839DC700484CBE /* Picture.swift */; };
 		5D9B73D02684910F00484CBE /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		5D359262268B51FD00A27AF3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5D359271268DF1A400A27AF3 /* PicCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCoding.swift; sourceTree = "<group>"; };
 		5D9B73C926839D5900484CBE /* PicturesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesDataSource.swift; sourceTree = "<group>"; };
 		5D9B73CC26839DC700484CBE /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		5D9B73CF2684910F00484CBE /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				5D9B73CC26839DC700484CBE /* Picture.swift */,
 				5D0F302E2685CB5700773BCF /* SegueIdentifiers.swift */,
 				5D359262268B51FD00A27AF3 /* ImagePicker.swift */,
+				5D359271268DF1A400A27AF3 /* PicCoding.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				5DECB9CA267B656400F92C86 /* SceneDelegate.swift in Sources */,
 				5D359263268B51FD00A27AF3 /* ImagePicker.swift in Sources */,
 				5DD554B52689DED700A2BE3E /* AddPicViewController.swift in Sources */,
+				5D359272268DF1A400A27AF3 /* PicCoding.swift in Sources */,
 				5D9B73CA26839D5900484CBE /* PicturesDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Picture: Equatable {
+struct Picture: Equatable, Codable {
     var name: String
-    var pic: UIImage
+    var picPath: String
 }

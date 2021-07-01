@@ -23,16 +23,18 @@ class ViewController: UIViewController, UITableViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.successDownload = { pic in
-            DispatchQueue.main.async {self.picturesDataSource.append(picture: pic, to: self.view as! UITableView)}
+            self.picturesDataSource.append(picture: pic, to: self.view as! UITableView)
         }
     }
+    
     
     @IBAction func addPicButton(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: SegueIdentifiers.toAddImage, sender: self)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        pic = picturesDataSource.picture(at: indexPath).pic
+        let picPath = picturesDataSource.picture(at: indexPath).picPath
+        pic = UIImage(contentsOfFile: picPath) ?? UIImage(named: "10")!
         
         self.performSegue(withIdentifier: SegueIdentifiers.toImageViewer, sender: self)
     }
@@ -47,5 +49,4 @@ class ViewController: UIViewController, UITableViewDelegate{
         }
     }
 }
-
 
