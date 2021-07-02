@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate{
     var picturesDataSource = PicturesDataSource()
     var pic = UIImage()
     var imagePicker = ImagePicker()
+    let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     
     override func loadView() {
         super.loadView()
@@ -33,8 +34,9 @@ class ViewController: UIViewController, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let picPath = picturesDataSource.picture(at: indexPath).picPath
-        pic = UIImage(contentsOfFile: picPath) ?? UIImage(named: "10")!
+        let name = picturesDataSource.picture(at: indexPath)
+        let picPath = Folders.picturePath(name)
+        pic = UIImage(contentsOfFile: picPath.path) ?? UIImage(named: "10")!
         
         self.performSegue(withIdentifier: SegueIdentifiers.toImageViewer, sender: self)
     }

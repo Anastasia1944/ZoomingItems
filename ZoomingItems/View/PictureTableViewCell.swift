@@ -11,11 +11,11 @@ class PictureTableViewCell: UITableViewCell {
     
     @IBOutlet weak var picNameLabel: UILabel!
     
-    var picture: Picture? {
+    var picture: String? {
         didSet {
             guard let picture = picture else { return }
             
-            picNameLabel.text = picture.name
+            picNameLabel.text = picture
             
         }
     }

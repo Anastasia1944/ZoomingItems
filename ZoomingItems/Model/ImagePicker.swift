@@ -8,49 +8,31 @@
 import UIKit
 import Alamofire
 
+struct Folders {
+    static let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    
+    static func picturePath(_ name: String) -> URL {
+        Folders.documents.appendingPathComponent("\(name)")
+    }
+}
+
 class ImagePicker {
     
-    var successDownload: ( (Picture) -> Void )?
+    var successDownload: ( (String) -> Void )?
     
-    private var downloadedImage = Picture(name: "", picPath: "")
-    
-    var destination: DownloadRequest.Destination = { _, _ in
-        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let fileURL = documentsURL.appendingPathComponent("image.png")
-        
-        return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
-    }
-    
-    
-    init() { }
-    
-    func downloadImage(imageName:String, imageURL: String) {
-        self.downloadedImage.name = imageName
-        picNameDestination(imgName: imageName)
-        AF.download(imageURL, to: destination)
+    func downloadImage(imageName: String, imageURL: String) {
+        AF
+            .download(imageURL, to: { _, _ in
+                let fileURL = Folders.picturePath(imageName)
+                return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+            })
             .downloadProgress { progress in
                 print("Download Progress: \(progress.fractionCompleted)")
             }
             .responseData { response in
-                if response.error == nil, let imagePath = response.fileURL?.path {
-                    self.downloadedImage.picPath = imagePath
-                    self.successDownload?(self.downloadedImage)
+                if response.error == nil {
+                    self.successDownload?(imageName)
                 }
             }
     }
-    
-    func getDownloadedImage() -> Picture? {
-        return downloadedImage
-    }
-    
-    func picNameDestination(imgName: String)  {
-        let dest: DownloadRequest.Destination = { _, _ in
-            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            let fileURL = documentsURL.appendingPathComponent("\(imgName).png")
-            
-            return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
-        }
-        destination = dest
-    }
-    
 }

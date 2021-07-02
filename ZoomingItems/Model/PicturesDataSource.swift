@@ -9,15 +9,15 @@ import UIKit
 
 class PicturesDataSource: NSObject {
     
-    private var pictures: [Picture]
+    private var pictures: [String]
     var picCoding = PicCoding()
     
-    static func generatePicturesData() -> [Picture] {
+    static func generatePicturesData() -> [String] {
         let picCode = PicCoding()
         return picCode.pictures!
     }
     
-    var selectedPicture: Picture? {
+    var selectedPicture: String? {
         didSet {
             if let selectedPicture = selectedPicture, let index = pictures.firstIndex(of: selectedPicture) {
                 selectedPictureIndex = index
@@ -39,7 +39,7 @@ class PicturesDataSource: NSObject {
         pictures.count
     }
     
-    func append(picture: Picture, to tableView: UITableView) {
+    func append(picture: String, to tableView: UITableView) {
         pictures.append(picture)
         tableView.insertRows(at: [IndexPath(row: pictures.count-1, section: 0)], with: .automatic)
         picCoding.pictures!.append(picture)
@@ -47,7 +47,7 @@ class PicturesDataSource: NSObject {
     }
     
     
-    func picture(at indexPath: IndexPath) -> Picture {
+    func picture(at indexPath: IndexPath) -> String {
         pictures[indexPath.row]
     }
 }
